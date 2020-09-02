@@ -19,26 +19,30 @@ class Cell:
 
     def make_order(self, digit):
         while self.cells > 0:
-            print('❤ ' * digit)
-            self.cells -= digit
             digit = digit if digit < self.cells else self.cells
+            self.cells -= digit
+            print('❤ ' * digit)
 
 
-cell_1 = Cell(48)
-cell_2 = Cell(12)
+cell_1 = Cell(12)
+cell_2 = Cell(3)
 
 cell_3 = Cell(cell_1 + cell_2)
+print(cell_3.cells)
 cell_3.make_order(10)
 print('_' * 30)
 
 cell_3 = Cell(cell_1 - cell_2)
+print(cell_3.cells)
 cell_3.make_order(10)
 print('_' * 30)
 
 cell_3 = Cell(cell_1 * cell_2)
+print(cell_3.cells)
 cell_3.make_order(10)
 print('_' * 30)
 
 cell_3 = Cell(cell_1 / cell_2)
+print(cell_3.cells)
 cell_3.make_order(10)
 print('_' * 30)
